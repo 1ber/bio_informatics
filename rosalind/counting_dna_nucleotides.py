@@ -1,15 +1,36 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-#License http://www.apache.org/licenses/
+# ~ http://rosalind.info/problems/mrna/
+# ~ Dois números A e B são congruentes a um terceiro, C, se o resto da divisão
+# ~ inteira de A e B por C for igual 
+
+import os, sys
 
 def main():
-    #http://rosalind.info/problems/dna/
-    cadeia_dna="AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
-    #Substituir T por um
-    cadeia_rna=cadeia_dna.replace( 'T', 'U' )
-    print( cadeia_rna )
-        
-if __name__ == "__main__":
     
-    main()
+    # I lost my original file for the first problem, so i tested only
+    # with the sambple dataset
+    sample_dataset='AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
+    
+    counter={}
+    for l in sample_dataset:
+        ## The if assures that each letter is counted one time only
+        if l not in counter.keys():
+            counter[l]=sample_dataset.count(l)
+    
+    response=''
+    # The solution values in the problem are ordered alphabetically, don't
+    # know if it's on porpouse, but just ordered the keys here and the
+    # values will be in the same order
+    for k in sorted( counter.keys() ):
+        #Already joining the values to the response string
+        response=response+str( counter[k] )+' '
+    
+    # Print without the last space
+    print( response[:-1] )
+    
+    sys.exit( 0 )
 
+if __name__ == "__main__":
+
+    main()
