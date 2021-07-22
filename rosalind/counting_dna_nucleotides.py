@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# ~ http://rosalind.info/problems/mrna/
-# ~ Dois números A e B são congruentes a um terceiro, C, se o resto da divisão
-# ~ inteira de A e B por C for igual 
+# ~ Copyright (c) 2021 Humberto Ramos Costa
+# ~ https://github.com/1ber
+# ~ https://raw.githubusercontent.com/1ber/bio_informatics/main/License.txt
+# ~ http://rosalind.info/problems/dna/
 
 import os, sys
 
