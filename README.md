@@ -1,2 +1,2 @@
 # bio_informatics
-Some code to deal with various bio_informatics problems
+Some code to study deal with various bio_informatics problems
